@@ -19,17 +19,9 @@ console.log(images);
 const galleryEl = document.querySelector('.gallery');
 console.log(galleryEl);
 
-const markup = images.map((image) => `<li class="gallery-item"><img class="pic" src=${image.url} alt=${image.alt}></li>`);
+const markup = images.map((image) => `<li class="gallery-item"><img class="pic" src=${image.url} alt=${image.alt}></li>`).join('');
 
 console.log(markup);
 
 galleryEl.insertAdjacentHTML('beforeend', markup)
 
-
-// for (let i = 0; i < images.length; i += 1) {
-  
-//   const itemIngredients = document.createElement('li');
-//   itemIngredients.classList.add('item')
-//   itemIngredients.innerHTML = images[i];
-//   galleryEl.appendChild(itemIngredients);
-// }

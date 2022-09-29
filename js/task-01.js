@@ -22,10 +22,9 @@ const categoriesEl = document.querySelector('#categories').children.length;
 console.log(`Number of categories: ${categoriesEl}`);
 
 const titleEl = document.querySelectorAll('.item > h2');
-// console.log(titleEl);
+
 
 const itemList = document.querySelectorAll('.item > ul');
-// console.log(itemList);
 
 
 
@@ -46,32 +45,6 @@ console.log(`Category: ${thirdNameItems}`);
 
 const thirdListLength = itemList[2].children.length;
 console.log(`Elements: ${thirdListLength}`);
-
-
-
-    // for (let i = 0; i < titleEl.length; i += 1) {
-    //     const names = titleEl[i];
-    //     console.log(`Category: ${names.textContent}`); 
-     
-    //  }
-    
-//     console.log('hello js');
-
-
-// console.log('Number of categories:', document.querySelectorAll('li.item').length);
-
-// console.log('Category:', document.querySelector('li.item').firstElementChild.firstChild);
-
-// console.log('Elements:', document.querySelector('li.item').firstElementChild.nextElementSibling.children.length);
-
-// console.log('Category:', document.querySelector('li.item').nextElementSibling.firstElementChild.firstChild);
-
-// console.log('Elements:', document.querySelector('li.item').nextElementSibling.firstElementChild.nextElementSibling.children.length);
-
-// console.log('Category:', document.querySelector('li.item').nextElementSibling.nextElementSibling.firstElementChild.firstChild);
-
-// console.log('Category:', document.querySelector('li.item').nextElementSibling.nextElementSibling.firstElementChild.nextElementSibling.children.length);
-
 
 
 

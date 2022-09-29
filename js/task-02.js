@@ -5,7 +5,6 @@ const ingredients = [
   'Tomatos',
   'Herbs',
   'Condiments',
-  'допомагав Google:)'
 ];
 
 // Напиши скрипт, який для кожного елемента масиву ingredients:
@@ -17,22 +16,31 @@ const ingredients = [
 
 const listIngrediens = document.querySelector('ul')
 
+const firstItemIngredients = document.createElement('li');
+firstItemIngredients.classList.add('item');
+firstItemIngredients.textContent = ingredients[0];
 
-for (let i = 0; i < ingredients.length; i += 1) {
-  
-  const itemIngredients = document.createElement('li');
-  itemIngredients.classList.add('item')
-  itemIngredients.innerHTML = ingredients[i];
-  listIngrediens.appendChild(itemIngredients);
-}
+const secondItemIngredients = document.createElement('li');
+secondItemIngredients.classList.add('item');
+secondItemIngredients.textContent = ingredients[1];
 
-console.log(listIngrediens);
+const thirdItemIngredients = document.createElement('li');
+thirdItemIngredients.classList.add('item');
+thirdItemIngredients.textContent = ingredients[2];
 
+const fourthItemIngredients = document.createElement('li');
+fourthItemIngredients.classList.add('item');
+fourthItemIngredients.textContent = ingredients[3];
 
-// const firstItemIngredients = document.createElement('li');
-// firstItemIngredients.classList.add('item')
-// console.log(firstItemIngredients);
+const fifthItemIngredients = document.createElement('li');
+fifthItemIngredients.classList.add('item');
+fifthItemIngredients.textContent = ingredients[4];
 
+const sixthItemIngredients = document.createElement('li');
+sixthItemIngredients.classList.add('item');
+sixthItemIngredients.textContent = ingredients[5];
 
-// const uniqueGenres = ingredients.map((ingredients) => ingredients);
-// console.log(uniqueGenres);
+listIngrediens.append(firstItemIngredients, secondItemIngredients, thirdItemIngredients,
+  fourthItemIngredients, fifthItemIngredients, sixthItemIngredients);
+
+// можливо так ? Але не можу додуматись = як з перебиранням масиву додати інгредієнти... 
