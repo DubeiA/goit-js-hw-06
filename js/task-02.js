@@ -16,31 +16,14 @@ const ingredients = [
 
 const listIngrediens = document.querySelector('ul')
 
-const firstItemIngredients = document.createElement('li');
-firstItemIngredients.classList.add('item');
-firstItemIngredients.textContent = ingredients[0];
+const vegetable = ingredients.map(ingredient => { 
+  const itemIngredients = document.createElement('li');
+  itemIngredients.classList.add('item');
+  itemIngredients.textContent = ingredient;
+  return itemIngredients
+})
 
-const secondItemIngredients = document.createElement('li');
-secondItemIngredients.classList.add('item');
-secondItemIngredients.textContent = ingredients[1];
+console.log(vegetable);
 
-const thirdItemIngredients = document.createElement('li');
-thirdItemIngredients.classList.add('item');
-thirdItemIngredients.textContent = ingredients[2];
+listIngrediens.append(...vegetable);
 
-const fourthItemIngredients = document.createElement('li');
-fourthItemIngredients.classList.add('item');
-fourthItemIngredients.textContent = ingredients[3];
-
-const fifthItemIngredients = document.createElement('li');
-fifthItemIngredients.classList.add('item');
-fifthItemIngredients.textContent = ingredients[4];
-
-const sixthItemIngredients = document.createElement('li');
-sixthItemIngredients.classList.add('item');
-sixthItemIngredients.textContent = ingredients[5];
-
-listIngrediens.append(firstItemIngredients, secondItemIngredients, thirdItemIngredients,
-  fourthItemIngredients, fifthItemIngredients, sixthItemIngredients);
-
-// можливо так ? Але не можу додуматись = як з перебиранням масиву додати інгредієнти... 

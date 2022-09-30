@@ -11,17 +11,28 @@ const checkValid = document.querySelector('#validation-input');
 const validAttribute = checkValid.getAttribute("data-length");
 
 
-checkValid.addEventListener('blur', event => {
-	if (event.target.value.length >= validAttribute) {
-		checkValid.classList.add('valid')
-		if (checkValid.classList.contains('invalid')) {
-			checkValid.classList.remove('invalid')
-		}
-	} else {
-		if (checkValid.classList.contains('valid')) {
-			checkValid.classList.remove('valid')
-		}
-		checkValid.classList.add('invalid')
-	}
-})
+checkValid.addEventListener("blur", (event) => {
 
+    if (event.target.value.length !== Number(validAttribute)) {
+        
+         return checkValid.classList.add("invalid");
+    }
+   
+   return checkValid.classList.replace("invalid" , "valid");
+});
+
+
+
+
+// checkValid.addEventListener('blur', event => {
+// 	if (event.target.value.length === Number(validAttribute)) {
+// 		checkValid.classList.add('valid')
+		
+// 			checkValid.classList.remove('invalid')
+		
+// 	} 
+
+// 			checkValid.classList.remove('valid')
+// 		checkValid.classList.add('invalid')
+	
+// })
